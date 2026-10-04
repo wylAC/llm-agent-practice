@@ -1,0 +1,13 @@
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 密钥与本地配置（API key 绝不能进仓库）
+.env
+*.bat
+*.ps1
+
+# IDE / 系统
+.vscode/
+.idea/
+Thumbs.db

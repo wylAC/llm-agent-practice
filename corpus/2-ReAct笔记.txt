@@ -1,0 +1,3 @@
+ReAct 是一种把推理和行动交错进行的智能体范式，全称 Synergizing Reasoning and Acting in Language Models。它的循环包含三个要素：Thought（思考下一步做什么）、Action（执行一个动作，如搜索）、Observation（外部环境返回的结果）。纯思维链 CoT 只推理不行动，容易在时效性事实上产生幻觉；ReAct 通过行动拿回真实信息，用观察修正推理，从而缓解幻觉和错误传播。
+ReAct 在 HotpotQA 和 FEVER 上通过调用维基百科 API 缓解了幻觉问题，在 ALFWorld 和 WebShop 两个交互决策环境上，仅用一到两个示例就超过了模仿学习和强化学习方法，绝对成功率分别提升 34% 和 10%。
+工程上，Function Calling 是 ReAct 的标准化实现：模型输出结构化的函数调用声明，宿主程序执行真实函数并把结果回填，循环直到任务完成。
